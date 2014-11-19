@@ -10,13 +10,13 @@ class Entrenador
     public:
         Entrenador();
         virtual ~Entrenador();
-        Pokemon setEquipo();
+        Pokemon setEquipo(int);
         void setNombre(string);
     protected:
     private:
         Pokemon Equipo[5];
         string Nombre;
-
+        int neq;
 };
 
 #endif // POKEMON:ENTRENADOR_H

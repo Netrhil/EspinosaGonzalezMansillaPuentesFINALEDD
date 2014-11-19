@@ -19,8 +19,8 @@ Entrenador::Entrenador()
     srand (time(NULL));
 
     /* Generamos un numero entre 1 y 6 representando la cantidad de pokemones por equipo: */
-    neq = rand() % 6 + 1;
-  
+    neq
+
     /*Se generaran numeros random representando la ID por cada pokemon que se quiera guardar*/
     do
     {
@@ -37,23 +37,9 @@ Entrenador::Entrenador()
                 puchamon>>
             }
         }
-    
-    }while()
-}
 
-Entrenador::~Entrenador()
-{
-    //dtor
-}
-
-void Entrenador::setNombre(string A)
-{
-
-}
-
-Pokemon Entrenador::setEquipo(){
+    }while(neq)
     char buffer[128];
-    char *buf;
     Pokemon all[150];
     ifstream puchamon;
     srand (time(NULL));
@@ -63,8 +49,23 @@ Pokemon Entrenador::setEquipo(){
         while(!puchamon.eof()){
             int num=rand()%151+1;
             puchamon.getline(buffer,3);
+            =int(buffer);
             puchamon.ignore(500,'\n');
             i++;
         }
     }
+}
+
+Entrenador::~Entrenador()
+{
+    //dtor
+}
+
+void Entrenador::setNombre(string A)
+{
+    nombre=A;
+}
+
+Pokemon Entrenador::setEquipo(int b){
+    neq=b;
 }
