@@ -39,8 +39,7 @@ int main()
     Entrenador Usuario, Oponente;
     usuario1=eq_usuario(vs);
     cout<<"Ingrese nombre usuario: "<<endl;
-    fflush(stdin);
-    getline(cin,usuario);
+    Usuario.Entrenador()
     cout<<"Ingrese nombre Oponente: "<<endl;
     fflush(stdin);
     getline(cin,oponente);
