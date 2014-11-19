@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1415401999 source:c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1415919705 source:c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\src\entrenador.cpp
+	"Entrenador.h"
+
+1415920050 c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\include\entrenador.h
+	"Pokemon.h"
+
+1415920029 c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\include\pokemon.h
+
+1415401154 source:c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\src\pokemon.cpp
+	"Pokemon.h"
+

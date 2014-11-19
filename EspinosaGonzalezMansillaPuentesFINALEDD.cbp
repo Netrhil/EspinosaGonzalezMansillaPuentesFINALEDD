@@ -13,6 +13,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="src" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -32,7 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Entrenador.h" />
+		<Unit filename="include/Pokemon.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Entrenador.cpp" />
+		<Unit filename="src/Pokemon.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

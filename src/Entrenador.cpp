@@ -1,4 +1,5 @@
 #include "Entrenador.h"
+#include <fstream.h>
 
 Entrenador::Entrenador()
 {
@@ -8,4 +9,9 @@ Entrenador::Entrenador()
 Entrenador::~Entrenador()
 {
     //dtor
+}
+
+Pokemon Entrenador::setEquipo()
+{
+
 }
