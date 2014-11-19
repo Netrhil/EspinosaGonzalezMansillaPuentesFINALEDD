@@ -30,17 +30,16 @@ int ValidarEquipo()
 int main()
 {
     int bat, vs;
-    char usuario[30], oponente[30];
+    string usuario, oponente;
     cout<<"Ingrese cantidad de batallas a realizar: "<<endl;
     bat=Validar();
     cout<<"Cantidad de Pokemon por equipo: ";
     vs=ValidarEquipo();
-    while ((vs<1) and (vs>6));
     cout<<"Ingrese nombre usuario: "<<endl;
     fflush(stdin);
-    gets(usuario);
+    getline(cin,usuario);
     cout<<"Ingrese nombre Oponente: "<<endl;
     fflush(stdin);
-    gets(oponente);
+    getline(cin,oponente);
     return 0;
 }
