@@ -3,11 +3,14 @@
 
 class Ataques
 {
+    public:
+
     private:
-    char Nombre[30];
-    char TipoP[30];
-    char TipoA[30];
-    int PO;
+        char Nombre[30];
+        char TipoP[30];
+        char TipoA[30];
+        char PoS[30];
+        int PO;
 };
 class Tipo{
     private:
@@ -21,13 +24,22 @@ class Pokemon
         Pokemon();
         virtual ~Pokemon();
         Ataques setmov();
-        void setDMG();
+        void setDMG(Pokemon,Pokemon,Ataques);
+        void setNUM(int);
+        void setNombre(char[30]);
+        void setAtaques(Ataques[3]);
+        void setTipo(Tipo);
+        void setPS(int);
+        void setATK(int);
+        void setDEF(int);
+        void setESP(int);
+        void setVEL(int);
     protected:
     private:
         int Numero;
         Ataques mov[3];
         char Nombre[30];
-        char Tipo[30];
+        Tipo tipo;
         int PS;
         int ATK;
         int DEF;

@@ -19,14 +19,16 @@ Entrenador::~Entrenador()
 Pokemon Entrenador::setEquipo(){
     char buffer[128];
     char *buf;
-    Pokemon all[151];
+    Pokemon all[150];
     ifstream puchamon;
     puchamon.open("lista_pokemon.txt");
+    int i=0;
     if (puchamon.is_open()){
         while(!puchamon.eof()){
             puchamon.getline(buffer,128);
             buf=strtok(buffer," ");
-            buf=strtok(NULL," ");
+            all[i].setNUM(int(buffer));
+            buf=strtok(buffer," ");
         }
     }
 }
