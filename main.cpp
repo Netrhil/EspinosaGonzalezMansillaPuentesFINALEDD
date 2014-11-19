@@ -36,6 +36,8 @@ int main()
     bat=Validar();
     cout<<"Cantidad de Pokemon por equipo: ";
     vs=ValidarEquipo();
+    Entrenador Usuario, Oponente;
+    usuario1=eq_usuario(vs);
     cout<<"Ingrese nombre usuario: "<<endl;
     fflush(stdin);
     getline(cin,usuario);
