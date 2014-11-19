@@ -10,6 +10,7 @@ class Entrenador
         Entrenador();
         virtual ~Entrenador();
         Pokemon setEquipo();
+        void setNombre();
     protected:
     private:
         Pokemon Equipo[5];
