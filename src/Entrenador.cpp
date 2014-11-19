@@ -8,7 +8,10 @@ using namespace std;
 
 Entrenador::Entrenador()
 {
-    //ctor
+    cin.clear();
+    cin.sync();
+    cout<<"Nombre: ";
+    getline(cin,Nombre);
 }
 
 Entrenador::~Entrenador()
