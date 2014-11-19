@@ -1,5 +1,6 @@
 #ifndef POKEMON_H
 #define POKEMON_H
+#include <string>
 
 class Ataques
 {
@@ -37,7 +38,7 @@ class Pokemon
     private:
         int Numero;
         Ataques mov[3];
-        char Nombre[30];
+        string Nombre;
         Tipo tipo;
         int PS;
         int ATK;
