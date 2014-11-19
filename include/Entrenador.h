@@ -1,6 +1,7 @@
 #ifndef POKEMON:ENTRENADOR_H
 #define POKEMON:ENTRENADOR_H
 #include "Pokemon.h"
+#include <string>
 
 
 class Entrenador
@@ -12,7 +13,7 @@ class Entrenador
     protected:
     private:
         Pokemon Equipo[5];
-        char Nombre[30];
+        string Nombre;
 
 };
 
