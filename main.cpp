@@ -37,11 +37,9 @@ int main()
     cout<<"Cantidad de Pokemon por equipo: ";
     vs=ValidarEquipo();
     Entrenador Usuario, Oponente;
-    usuario1=eq_usuario(vs);
-    cout<<"Ingrese nombre usuario: "<<endl;
-    Usuario.Entrenador()
+    cout<<"U   S   U   A   R   I   O "<<endl;
+    Usuario.Entrenador();
     cout<<"Ingrese nombre Oponente: "<<endl;
-    fflush(stdin);
-    getline(cin,oponente);
+    Oponente.Entrenador();
     return 0;
 }
