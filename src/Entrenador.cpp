@@ -4,11 +4,15 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 using namespace std;
 
 Entrenador::Entrenador()
 {
-    //ctor
+    cin.clear();
+    cin.sync();
+    cout<<"Nombre: ";
+    getline(cin,Nombre);
 }
 
 Entrenador::~Entrenador()
@@ -26,14 +30,15 @@ Pokemon Entrenador::setEquipo(){
     char *buf;
     Pokemon all[150];
     ifstream puchamon;
+    srand (time(NULL));
     puchamon.open("lista_pokemon.txt");
     int i=0;
     if (puchamon.is_open()){
         while(!puchamon.eof()){
-            puchamon.getline(buffer,128);
-            buf=strtok(buffer," ");
-            all[i].setNUM(int(buffer));
-            buf=strtok(buffer," ");
+            int num=rand()%151+1;
+            puchamon.getline(buffer,3);
+            puchamon.ignore(500,'\n');
+            i++;
         }
     }
     arch="Equipo"+str(n)+".txt";
@@ -41,21 +46,7 @@ Pokemon Entrenador::setEquipo(){
     print "\n Su equipo de ", n_poke_eq, " pokemons es:\n"
     i=0
     while i!=n_poke_eq:
-        if n==1:
-            npoke=raw_input("Nombre Pokemon que quiere: ")
-            archivo=open("lista_pokemon.txt", "r")
-            a=False
-            for linea in archivo:
-                dato=linea.split(" ")
-                if dato[1]==npoke:
-                    print "Pokemon",i+1, ": ",dato[1],'\n'
-                    usuario.write(linea)
-                    a=True
-            if a==False:
-                print "Pokemon no valido, ingrese pokemon",i
-                i=i-1
-            i=i+1
-            archivo.close()
+
         if n==2:
             num_p=random.randint(1, 151)
             archivo=open("lista_pokemon.txt", "r")

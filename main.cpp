@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string>
 #include <stdlib.h>
+#include "Entrenador.h"
+#include "Pokemon.h"
 
 using namespace std;
 
@@ -31,17 +33,27 @@ int ValidarEquipo()
 int main()
 {
     int bat, vs;
-    string usuario, oponente;
+    Pokemon EqU, EqO;
+    string usuario1, oponente;
     cout<<"Ingrese cantidad de batallas a realizar: "<<endl;
     bat=Validar();
     cout<<"Cantidad de Pokemon por equipo: ";
     vs=ValidarEquipo();
     Entrenador Usuario, Oponente;
-    usuario1=eq_usuario(vs);
+<<<<<<< HEAD
     cout<<"Ingrese nombre usuario: "<<endl;
-    Usuario.Entrenador()
+    fflush(stdin);
+    gets(usuario1);
+    Usuario.setNombre(usuario1);
     cout<<"Ingrese nombre Oponente: "<<endl;
     fflush(stdin);
-    getline(cin,oponente);
+    gets(oponente);
+    Oponente.setNombre(oponente);
+=======
+    cout<<"U   S   U   A   R   I   O "<<endl;
+    Usuario.Entrenador();
+    cout<<"Ingrese nombre Oponente: "<<endl;
+    Oponente.Entrenador();
+>>>>>>> origin/master
     return 0;
 }
