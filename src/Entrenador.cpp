@@ -20,7 +20,7 @@ Entrenador::~Entrenador()
     //dtor
 }
 
-Entrenador::SetNombre()
+void Entrenador::setNombre(string A)
 {
 
 }
@@ -41,20 +41,4 @@ Pokemon Entrenador::setEquipo(){
             i++;
         }
     }
-    arch="Equipo"+str(n)+".txt";
-    usuario=open(arch,"w")
-    print "\n Su equipo de ", n_poke_eq, " pokemons es:\n"
-    i=0
-    while i!=n_poke_eq:
-
-        if n==2:
-            num_p=random.randint(1, 151)
-            archivo=open("lista_pokemon.txt", "r")
-            for linea in archivo:
-                dato=linea.split(" ")
-                if int(dato[0])==num_p:
-                    print "Pokemon",i+1, ": ",dato[1] ##Borar Linea al entregar
-                    usuario.write(linea)
-            archivo.close()
-            i=i+1
 }

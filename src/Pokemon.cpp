@@ -11,7 +11,7 @@ Pokemon::~Pokemon()
     //dtor
 }
 
-Ataques Pokemon::setmov(){
+void Pokemon::setmov(){
 
 
 }

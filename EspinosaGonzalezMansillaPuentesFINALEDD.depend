@@ -1,21 +1,27 @@
 # depslib dependency file v1.0
-1416419407 source:c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\main.cpp
+1416431562 source:c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\main.cpp
 	<iostream>
 	<stdio.h>
+	<string>
 	<stdlib.h>
+	"Entrenador.h"
+	"Pokemon.h"
 
-1416428310 source:c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\src\entrenador.cpp
+1416431641 source:c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\src\entrenador.cpp
 	"Entrenador.h"
 	"Pokemon.h"
 	<fstream>
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
+	<time.h>
 
-1415926424 c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\include\entrenador.h
+1416431474 c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\include\entrenador.h
+	<iostream>
 	"Pokemon.h"
+	<string>
 
-1416428965 c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\include\pokemon.h
+1416431786 c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\include\pokemon.h
 
 1415401154 source:c:\users\braulio\documents\github\espinosagonzalezmansillapuentesfinaledd\src\pokemon.cpp
 	"Pokemon.h"

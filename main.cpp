@@ -33,27 +33,18 @@ int ValidarEquipo()
 int main()
 {
     int bat, vs;
-    Pokemon EqU, EqO;
+    Pokemon EqU[5], EqO[5];
     string usuario1, oponente;
     cout<<"Ingrese cantidad de batallas a realizar: "<<endl;
     bat=Validar();
     cout<<"Cantidad de Pokemon por equipo: ";
     vs=ValidarEquipo();
     Entrenador Usuario, Oponente;
-<<<<<<< HEAD
     cout<<"Ingrese nombre usuario: "<<endl;
-    fflush(stdin);
-    gets(usuario1);
+    cin>>usuario1;
     Usuario.setNombre(usuario1);
     cout<<"Ingrese nombre Oponente: "<<endl;
-    fflush(stdin);
-    gets(oponente);
+    cin>>oponente;
     Oponente.setNombre(oponente);
-=======
-    cout<<"U   S   U   A   R   I   O "<<endl;
-    Usuario.Entrenador();
-    cout<<"Ingrese nombre Oponente: "<<endl;
-    Oponente.Entrenador();
->>>>>>> origin/master
     return 0;
 }

@@ -23,11 +23,10 @@ class Pokemon
     public:
         Pokemon();
         virtual ~Pokemon();
-        Ataques setmov();
         void setDMG(Pokemon,Pokemon,Ataques);
         void setNUM(int);
         void setNombre(char[30]);
-        void setAtaques(Ataques[3]);
+        void setmov();
         void setTipo(Tipo);
         void setPS(int);
         void setATK(int);
