@@ -9,36 +9,59 @@ using namespace std;
 
 Entrenador::Entrenador()
 {
-    int m;
+    int m=1;
+    char welp[3];
+    
+    //Limpiamos el cin
     cin.clear();
     cin.sync();
     cout<<"Nombre: ";
     getline(cin,Nombre);
-    int neq,idpoke;
+    
     /* Inicializamos la semilla del random: */
     srand (time(NULL));
-
-    /* Generamos un numero entre 1 y 6 representando la cantidad de pokemones por equipo: */
-    neq
-
-    /*Se generaran numeros random representando la ID por cada pokemon que se quiera guardar*/
+    
+    //Comenzaremos entonces a definir el equipo
     do
     {
-        idpoke = rand() % 150 + 1;
-        //Abrimos el archivo lista_pokemon.txt
+        /*Se generaran numeros random representando la ID por cada pokemon que se quiera guardar*/
+        int idpoke = rand() % 150 + 1;
+        
+        //Definimos el puntero puchamon
         ifstream puchamon;
+        
+        //Abrimos el archivo lista_pokemon.txt
         puchamon.open("lista_pokemon.txt");
-        puchamon>>m;
-        //Definimos m como largo de puchamon
-        for (int i=0;i<m;i++)
+        for (int i=0;i<150;i++)
         {
+            puchamon.getline(puchaid,3)
             if (puchamon==idpoke)
             {
-                puchamon>>
+                Numero=puchaid;
+                puchamon.ignore(3,' ');
+                puchamon.getline(Nombre,100,' ');
+                puchamon.ignore(100,' ');
+                puchamon.getline(tipo,50,' ');
+                puchamon.ignore(50,' ');
+                puchamon.getline(welp,3,' ');
+                PS=atoi(welp);
+                puchamon.ignore(50,' ');
+                puchamon.getline(welp,3,' ');
+                ATK=atoi(welp);
+                puchamon.ignore(50,' ');
+                puchamon.getline(welp,3,' ');
+                DEF=atoi(welp);
+                puchamon.ignore(50,' ');
+                puchamon.getline(welp,3,' ');
+                ESP=atoi(welp);
+                puchamon.ignore(50,' ');
+                puchamon.getline(welp,3,' ');
+                VEL=atoi(welp);
             }
         }
-
-    }while(neq)
+    m++;
+    }while(neq!=m);
+    /* Braulio version:
     char buffer[128];
     Pokemon all[150];
     ifstream puchamon;
@@ -53,7 +76,7 @@ Entrenador::Entrenador()
             puchamon.ignore(500,'\n');
             i++;
         }
-    }
+    }*/
 }
 
 Entrenador::~Entrenador()
