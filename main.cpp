@@ -40,14 +40,14 @@ int main()
     cout<<"Ingrese cantidad de batallas a realizar: "<<endl;
     bat=Validar();
     cout<<"Cantidad de Pokemon por equipo: ";
-    vs=ValidarEquipo(); //
+    vs=ValidarEquipo(); //valida que es un numero del 1 al 6
     cout<<"Ingrese nombre usuario: "<<endl;
     cin>>usuario1;
     Usuario.setEquipo(vs);
-    Usuario.Entrenador();
+    Usuario.setEntrenador();
     cout<<"Ingrese nombre Oponente: "<<endl;
     cin>>oponente;
     Oponente.setEquipo(vs);
-    Oponente.Entrenador();
+    Oponente.setEntrenador();
     return 0;
 }

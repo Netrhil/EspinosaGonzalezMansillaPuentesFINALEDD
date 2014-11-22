@@ -1,4 +1,8 @@
+#include <iostream>
 #include "Pokemon.h"
+#include <time.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include <fstream>
 
 Pokemon::Pokemon()
@@ -12,24 +16,43 @@ Pokemon::~Pokemon()
 }
 
 void Pokemon::setmov(){
+    char buffer[128];
+    Ataques A[3];
+    ifstream moves;
+    moves.open("lista ataques.txt");
+    srand(time(NULL));
+    if (moves.is_open()){
+        for (int i=0;i<3;i++){
 
-
-}
-
-void Pokemon::setDMG(Pokemon At,Pokemon P, Ataques A)
-{
-    float aux=2; //El 2 base de la formula
-    if (A.PoS=='Fisico'){ //para saber si tomar el ataque fisico o el especial
-        aux+=(P.ATK*A.PO*(11))/25*Df.DEF; //fisico
+        }
     }
     else{
-        aux+=(P.ESP*A.PO*(11))/25*Df.ESP; //especial
+        cout<<"Error al abrir el archivo"<<endl;
     }
-    if (P.Tipo==A.TipoA){
+}
+
+void Pokemon::setDMG(Pokemon P, Ataques A)
+{
+    float aux=2; //El 2 base de la formula
+    string PoS,Nombre;
+    Tipo tipo;
+    int Potencia;
+    float Efectividad;
+    PoS=A.getPoS();
+    tipo=A.getTipo();
+    Nombre=A.getNombre();
+    Potencia=A.getPO();
+    if (PoS=="Fisico"){ //para saber si tomar el ataque fisico o el especial
+        aux+=(P.ATK*Potencia*(11))/25*DEF; //fisico
+    }
+    else{
+        aux+=(P.ESP*Potencia*(11))/25*ESP; //especial
+    }
+    if (P.tipoP==tipoP){
         aux*=1.5; //Si el pokemon es del mismo tipo que el ataque
     }
     srand (time(NULL));
-    aux=aux*Efectivo*(rand()%100+85)*0.01; //Los otros multiplicadores afuera del parentesis
+    aux=aux*Efectividad*(rand()%100+85)*0.01; //Los otros multiplicadores afuera del parentesis
     DMG+=aux;
 }
 
@@ -38,21 +61,14 @@ void Pokemon::setNUM(int A)
     Numero=A;
 }
 
-void Pokemon::setNombre(char[30] A)
+void Pokemon::setNombre(string A)
 {
-    strcpy(Nombre,A);
-}
-
-void Pokemon::setAtaques(Ataques[3] A)
-{
-    for (int i=0;i<4;i++){
-        mov[i]=A[i];
-    }
+    Nombre=A;
 }
 
 void Pokemon::setTipo(Tipo A)
 {
-    tipo=A;
+    tipoP=A;
 }
 
 void Pokemon::setPS(int A)
@@ -79,3 +95,77 @@ void Pokemon::setVEL(int A)
 {
     VEL=A;
 }
+
+string Ataques::getNombre()
+{
+    return Nombre;
+}
+
+Tipo Ataques::getTipo()
+{
+    return tipoA;
+}
+
+string Ataques::getPoS()
+{
+    return PoS;
+}
+
+int Ataques::getPO()
+{
+    return PO;
+}
+
+Ataques::Ataques()
+{
+    //ctor
+}
+
+Ataques::~Ataques()
+{
+    //dtor
+}
+
+Tipo Pokemon::getTipo()
+{
+    return tipoP;
+}
+
+Tipo::Tipo()
+{
+
+}
+
+Tipo::~Tipo()
+{
+
+}
+
+string Tipo::getNombre()
+{
+    return NombreT;
+}
+
+string[14] Tipo::getDeb()
+{
+    string aux[14];
+    for (int i=0;i<14;i++){
+        aux[i]=deb[i];
+    }
+    return aux;
+}
+
+string[14] Tipo::getRes()
+{
+    string aux[14];
+    for (int i=0;i<14;i++){
+        aux[i]=res[i];
+    }
+    return aux;
+}
+
+void Tipo::setTipo()
+{
+
+}
+

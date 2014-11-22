@@ -1,32 +1,49 @@
 #ifndef POKEMON_H
 #define POKEMON_H
 #include <string>
+#include <vector>
+using namespace std;
+
+class Tipo{
+    public:
+        Tipo();
+        virtual ~Tipo();
+        string getNombre();
+        vector<string> getDeb();
+        vector<string> getRes();
+        void setTipo();
+    private:
+        string NombreT;
+        string deb[14];
+        string res[14];
+};
 
 class Ataques
 {
     public:
+        Ataques();
+        virtual ~Ataques();
+        string getNombre();
+        Tipo getTipo();
+        string getPoS();
+        int getPO();
+    private:
+        string Nombre;
+        Tipo tipoA; //Tipo Ataque
+        string PoS; //fisico o especial
+        int PO; //Potencia
+};
 
-    private:
-        char Nombre[30];
-        char TipoP[30];
-        char TipoA[30];
-        char PoS[30];
-        int PO;
-};
-class Tipo{
-    private:
-        int deb[15];
-        int res[15];
-};
 
 class Pokemon
 {
     public:
         Pokemon();
         virtual ~Pokemon();
-        void setDMG(Pokemon,Pokemon,Ataques);
+        Tipo getTipo();
+        void setDMG(Pokemon,Ataques);
         void setNUM(int);
-        void setNombre(char[30]);
+        void setNombre(string);
         void setmov();
         void setTipo(Tipo);
         void setPS(int);
@@ -39,7 +56,7 @@ class Pokemon
         int Numero;
         Ataques mov[3];
         string Nombre;
-        Tipo tipo;
+        Tipo tipoP;
         int PS;
         int ATK;
         int DEF;
